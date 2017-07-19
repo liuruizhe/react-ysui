@@ -1,0 +1,11 @@
+@import '../baseStyle/index';
+.ysui-btn-area{
+  display:-webkit-box;
+  .ysui-btn{
+    margin-right: 10*$px;
+    -webkit-box-flex:1;
+    &:last-child{
+        margin-right:0;
+    }
+  }
+}
