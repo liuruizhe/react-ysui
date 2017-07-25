@@ -8,6 +8,9 @@ import 'ysui';
 import HomePage from './pages/home/home';
 import ButtonPage from './pages/button/button';
 import ListPage from './pages/list/list';
+import InputPage from './pages/input/input';
+import DialogPage from './pages/dialog/dialog';
+import ToastPage from './pages/toast/toast';
 import './app.scss';
 
 const App = ({ children }) => (
@@ -25,9 +28,9 @@ ReactDOM.render((
       <Route path="home" component={HomePage} />
       <Route path="button" component={ButtonPage} />
       <Route path="list" component={ListPage} />
-      <Route path="input" component={ListPage} />
-      <Route path="dialog" component={ListPage} />
-      <Route path="toast" component={ListPage} />
+      <Route path="input" component={InputPage} />
+      <Route path="dialog" component={DialogPage} />
+      <Route path="toast" component={ToastPage} />
     </Route>
   </Router>
 ), document.getElementById('root'));

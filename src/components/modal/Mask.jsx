@@ -6,9 +6,11 @@ const Mask = (props) => {
   const { className, transparent } = props;
 
   const newProps = Object.assign({}, props, {
-    className: classNames('Mask', {
-      'Mask-notransparent': !transparent,
-    }, className),
+    className: classNames({
+      'ysui-mask': !transparent,
+      'ysui-mask_transparent': transparent,
+      [className]: className,
+    }),
   });
   delete newProps.transparent;
 
