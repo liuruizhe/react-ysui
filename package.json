@@ -2,19 +2,39 @@
   "name": "react-ysui",
   "version": "0.0.1",
   "description": "YSUI 是一套基础样式库，目的是使用户的使用感知更加统一。",
+  "homepage": "https://github.com/efe-team/react-ysui",
+  "main": "src/index.jsx",
   "scripts": {
-    "start": "webpack-dev-server --config examples/webpack.config.js --content-base examples/ --hot --inline --progress --colors --host 127.0.0.1 --port 8080",
     "lint": "eslint 'src/**/*.js'",
-    "build":"webpack --config examples/webpack.config.js"
+    "build": "npm run lint && webpack --config webpack.config.js --progress --colors -p",
+    "start": "webpack-dev-server --config webpack.config.js --hot --inline --progress --colors --port 8080",
+    "pretest": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/efe-team/react-ysui"
+  },
+  "keywords": [
+    "ui",
+    "react"
+  ],
+  "author": "efe team",
+  "contributors": [
+    {
+      "name": "Corey600",
+      "email": "fcx600@163.com"
+    },
+    {
+      "name": "JPyuan",
+      "email": "xxx@xxx.com"
+    }
+  ],
+  "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-router": "^3.0.0"
+    "react": "^15.3.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -28,10 +48,18 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
     "node-sass": "^4.5.3",
+    "react-router": "^4.1.2",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "peerDependencies": {
+    "ysui": "~0.0.2",
+    "react-dom": "^15.3.0",
+    "react-router": "^3.0.0"
   }
 }

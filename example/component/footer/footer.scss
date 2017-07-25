@@ -1,0 +1,17 @@
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  .footer__link {
+    display: inline-block;
+    img {
+      height: 40px;
+      vertical-align: middle;
+    }
+    span {
+      margin-left: 5px;
+      color: #888888;
+      font-size: 22px;
+      vertical-align: middle;
+    }
+  }
+}

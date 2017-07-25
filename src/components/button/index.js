@@ -1,5 +1,5 @@
-import Button from './button';
-import ButtonArea from './button_area';
+import Button from './Button';
+import ButtonArea from './ButtonArea';
 
 export {
     Button,

@@ -1,0 +1,14 @@
+
+html, body {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f8f8f8;
+}
+
+.page {
+  .page_content {
+    &.page_spacing {
+      padding: 0 15px;
+    }
+  }
+}

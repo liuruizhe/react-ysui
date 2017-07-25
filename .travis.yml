@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - stable
+cache:
+  directories:
+    - node_modules
+script:
+  - npm test
+before_install:
+    - npm install --save react@15.4.0 react-dom@15.4.0
+after_script:
+    - npm run coverage
