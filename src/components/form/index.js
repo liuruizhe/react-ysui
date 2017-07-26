@@ -1,9 +1,9 @@
-import Input from './Input';
+import Switch from './Switch';
 import Checkbox from './Checkbox';
 import Radio from './Radio';
 
 export {
-  Input,
+  Switch,
   Checkbox,
   Radio,
 };
