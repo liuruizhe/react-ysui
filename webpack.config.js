@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     app: ['./example/app.jsx'],
-    react: ['react', 'react-dom', 'react-router'],
+    common: ['react', 'react-dom', 'react-router', 'fastclick'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -38,7 +38,7 @@ module.exports = {
       filename: 'index.html',
       template: 'example/index.html',
       chunksSortMode: 'dependency',
-      chunks: ['react', 'app'],
+      chunks: ['common', 'app'],
       favicon: 'example/favicon.ico',
       minify: false,
     }),

@@ -3,6 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import FastClick from 'fastclick';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'babel-polyfill';
 // eslint-disable-next-line import/extensions
 import 'ysui';
 import HomePage from './pages/home/home';
@@ -20,6 +24,12 @@ const App = ({ children }) => (
 App.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+if ('addEventListener' in document) {
+  document.addEventListener('DOMContentLoaded', () => {
+    FastClick.attach(document.body);
+  }, false);
+}
 
 ReactDOM.render((
   <Router history={hashHistory}>
