@@ -80,6 +80,7 @@
   },
   "peerDependencies": {
     "ysui": "~0.0.2",
-    "react-dom": "^0.14.x || ^15.0.0-0 || 15.x"
+    "react-dom": "^0.14.x || ^15.0.0-0 || 15.x",
+    "react-router": "^1.0.2"
   }
 }
