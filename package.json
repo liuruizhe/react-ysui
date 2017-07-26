@@ -79,7 +79,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "peerDependencies": {
-    "ysui": "~0.0.2",
+    "ysui": "0.0.2",
     "react-dom": "^0.14.x || ^15.0.0-0 || 15.x",
     "react-router": "^1.0.2"
   }
