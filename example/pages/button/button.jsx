@@ -6,7 +6,7 @@ import { Button, ButtonArea } from '../../../src';
 const ButtonPage = () => (
   <div className="page">
     <Header title="Button" desc="按钮" />
-    <div className="page_content page_spacing">
+    <div className="page__content page__content_spacing">
       <ButtonArea>
         <Button>页面主按钮</Button>
         <Button selected>页面主按钮</Button>
@@ -41,7 +41,7 @@ const ButtonPage = () => (
         <Button selected style={{ maxWidth: 70 }}>短</Button>
       </ButtonArea>
     </div>
-    <Footer />
+    <Footer title="YSUI" />
   </div>
 );
 

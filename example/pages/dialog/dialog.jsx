@@ -19,7 +19,7 @@ class DialogPage extends Component {
     return (
       <div className="page">
         <Header title="Dialog" desc="对话框" />
-        <div className="page_content page_spacing">
+        <div className="page__content page__content_spacing">
           <ButtonArea>
             <Button onClick={() => { this.setState({ open1: true }); }}>Dialog样式一</Button>
             <Button onClick={() => { this.setState({ open2: true }); }}>Dialog样式二</Button>
@@ -31,7 +31,7 @@ class DialogPage extends Component {
         <Dialog show={this.state.open2}>dialog2</Dialog>
         <Dialog show={this.state.open3}>dialog3</Dialog>
         <Dialog show={this.state.open4}>dialog4</Dialog>
-        <Footer />
+        <Footer title="YSUI" />
       </div>
     );
   }

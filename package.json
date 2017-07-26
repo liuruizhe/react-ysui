@@ -5,9 +5,9 @@
   "homepage": "https://github.com/efe-team/react-ysui",
   "main": "src/index.jsx",
   "scripts": {
-    "lint": "eslint 'src/**/*.js'",
-    "build": "npm run lint && webpack --config webpack.config.js --progress --colors -p",
-    "start": "webpack-dev-server --config webpack.config.js --hot --inline --progress --colors --port 8080",
+    "lint": "eslint 'src/**/*.*'",
+    "build": "webpack --config webpack.config.prod.js --progress --colors -p",
+    "start": "webpack-dev-server --config webpack.config.js --hot --inline --progress --colors --host 127.0.0.1 --port 8080",
     "pretest": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -48,12 +48,14 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
     "node-sass": "^4.5.3",
     "react-router": "^4.1.2",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   },

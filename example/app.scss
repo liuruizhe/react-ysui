@@ -6,9 +6,36 @@ html, body {
 }
 
 .page {
-  .page_content {
-    &.page_spacing {
+  .page__content {
+    &.page__content_spacing {
       padding: 0 15px;
+    }
+    .page__item {
+      background-color: #ffffff;
+      .page__title {
+        padding: 20px;
+        opacity: .4;
+      }
+    }
+    .page__item + .page__item {
+      margin-top: 10px;
+    }
+  }
+}
+
+.home.page {
+  .ysui-cells{
+    margin-top: 0;
+    &:before, &:after{
+      display: none;
+    }
+  }
+  .ysui-cell {
+    padding-left: 20px;
+    padding-right: 20px;
+    &:before{
+      left: 20px;
+      right: 20px;
     }
   }
 }

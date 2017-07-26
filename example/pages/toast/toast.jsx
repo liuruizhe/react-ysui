@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../component/header/header';
 import Footer from '../../component/footer/footer';
-import { Button, ButtonArea } from '../../../src';
+import { Button, ButtonArea, Toast } from '../../../src';
 
 class ToastPage extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class ToastPage extends Component {
     return (
       <div className="page">
         <Header title="Toast" desc="弱提示" />
-        <div className="page_content page_spacing">
+        <div className="page__content page__content_spacing">
           <ButtonArea>
             <Button onClick={() => { this.setState({ open1: true }); }}>Toast成功样式</Button>
             <Button onClick={() => { this.setState({ open2: true }); }}>Toast失败样式</Button>
@@ -27,11 +27,11 @@ class ToastPage extends Component {
             <Button onClick={() => { this.setState({ open4: true }); }}>Toast默认样式</Button>
           </ButtonArea>
         </div>
-        {this.state.open1 && <div>toast1</div>}
-        {this.state.open2 && <div>toast2</div>}
-        {this.state.open3 && <div>toast3</div>}
-        {this.state.open4 && <div>toast4</div>}
-        <Footer />
+        <Toast show={this.state.open1}>toast1</Toast>
+        <Toast show={this.state.open2}>toast2</Toast>
+        <Toast show={this.state.open3}>toast3</Toast>
+        <Toast show={this.state.open4}>toast4</Toast>
+        <Footer title="YSUI" />
       </div>
     );
   }

@@ -1,26 +1,32 @@
 
+'use strict';
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
     app: ['./example/app.jsx'],
+    react: ['react', 'react-dom', 'react-router'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   module: {
     loaders: [{
-      test: /\.(css|scss)/,
+      test: /\.s?css$/,
       loader: 'style-loader!css-loader!sass-loader',
     }, {
-      test: /\.(js|jsx)$/,
+      test: /\.jsx?$/,
       loader: 'babel-loader?presets[]=es2015&presets[]=react',
       exclude: /node_modules/,
     }, {
       test: /\.(ico|png|jpeg|jpg|gif|svg)$/,
       loader: 'file-loader',
+      query: {
+        name: '[name].[ext]',
+      },
     }],
   },
   resolve: {
@@ -32,7 +38,7 @@ module.exports = {
       filename: 'index.html',
       template: 'example/index.html',
       chunksSortMode: 'dependency',
-      chunks: ['app'],
+      chunks: ['react', 'app'],
       favicon: 'example/favicon.ico',
       minify: false,
     }),

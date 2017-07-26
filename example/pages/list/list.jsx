@@ -6,8 +6,8 @@ import Footer from '../../component/footer/footer';
 const ListPage = () => (
   <div className="page">
     <Header title="List" desc="列表" />
-    <div className="page_content">List</div>
-    <Footer />
+    <div className="page__content">List</div>
+    <Footer title="YSUI" />
   </div>
 );
 
