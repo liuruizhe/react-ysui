@@ -4,26 +4,31 @@ import classNames from 'classnames';
 import Mask from './Mask';
 
 const Toast = (props) => {
-  const { children, className, show, iconSrc, iconStyle } = props;
+  const { children, className, show, icon, iconStyle } = props;
 
   const newProps = Object.assign({}, props, {
-    className: classNames('Toast', className),
+    className: classNames({
+      'ysui-toast': true,
+      'ysui-toast_success': icon === 'success',
+      'ysui-toast_fail': icon === 'fail',
+      'ysui-toast_loading': icon === 'loading',
+      [className]: className,
+    }),
   });
   delete newProps.children;
   delete newProps.show;
-  delete newProps.iconSrc;
+  delete newProps.icon;
   delete newProps.iconStyle;
 
   return (
-    <div
-      className="Toast-parent"
-      style={{ display: show ? 'block' : 'none' }}
-    >
+    <div style={{ display: show ? 'block' : 'none' }}>
       <Mask transparent />
       <div {...newProps}>
-        {iconSrc &&
-        <img className="Toast-icon" alt="" src={iconSrc} style={iconStyle} />}
-        <span className="Toast-content">{children}</span>
+        <div className="ysui-toast__content">
+          {icon &&
+          <div className="ysui-toast__icon" style={iconStyle} />}
+          <div className="ysui-toast__text">{children}</div>
+        </div>
       </div>
     </div>
   );
@@ -33,14 +38,17 @@ Toast.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   show: PropTypes.bool,
-  iconSrc: PropTypes.string,
+  icon: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
+  ]),
   iconStyle: PropTypes.shape({}),
 };
 
 Toast.defaultProps = {
   className: null,
   show: false,
-  iconSrc: null,
+  icon: false,
   iconStyle: {},
 };
 
