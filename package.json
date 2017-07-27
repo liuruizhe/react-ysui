@@ -1,6 +1,6 @@
 {
   "name": "react-ysui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "YSUI 是一套基础样式库，目的是使用户的使用感知更加统一。",
   "homepage": "https://github.com/efe-team/react-ysui",
   "main": "./src",
