@@ -78,11 +78,12 @@
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "ysui": "0.0.3"
   },
   "peerDependencies": {
-    "ysui": "0.0.3",
     "react-dom": "^0.14.x || ^15.0.0-0 || 15.x",
-    "react-router": "^3.0.2"
+    "react-router": "^3.0.2",
+    "ysui": "0.0.3"
   }
 }
